@@ -1,0 +1,9 @@
+services:
+  api:
+    build: .
+    container_name: alpharena-monad-api
+    restart: unless-stopped
+    ports:
+      - "3021:3021"
+    env_file:
+      - .env.prod
